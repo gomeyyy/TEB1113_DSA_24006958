@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a4373829-f29f-4c21-a537-ecb837f7e6ee}</ProjectGuid>
-    <RootNamespace>My24006958razinL2</RootNamespace>
+    <ProjectGuid>{b155fc10-bb05-431a-8d10-994e7bea23fb}</ProjectGuid>
+    <RootNamespace>My24006958razinL2Hard</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="24006958_razin_L2.cpp" />
+    <ClCompile Include="24006958_razin_L2_Hard.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

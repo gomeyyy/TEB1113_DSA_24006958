@@ -8,25 +8,13 @@ This repository contains lab exercises for the TEB1113 Data Structures & Algorit
 
 ## 📋 Lab Overview
 
-| Lab No. | Topic                     | File(s) / Folder           | Description |
-|:------:|:--------------------------|:---------------------------|:------------|
-| 1      | Singly Linked List        | `Lab1/`                    | Implemented a basic singly linked list with `add`, `delete`, and `search` operations. |
-| 2      | Doubly Linked List        | `Lab2/`                    | Enhanced list supporting bidirectional traversal and middle insertions. |
-| 3      | Circular Queue           | `Lab3/`                    | Implemented a circular queue (circular singly linked list) with `enqueue`, `dequeue`, and display capabilities. |
-| 4      | Stack using Linked List   | `Lab4/`                    | Built a stack (LIFO) data structure using linked list nodes. |
-| 5      | Binary Tree Insertion     | `Lab5/`                    | Code to insert nodes into a binary tree and display its structure. |
-| 6      | [Topic Preview or TBD]    | `Lab6/`                    | [Add brief description when ready or mark as “Work in progress”] |
-| 7      | Binary Tree Traversal     | `Lab7/`                    | Preorder traversal with labeled left/right children and recursive tree display. |
+| Lab No. | Topic                               | File(s) / Folder           | Date          | Desc             |
+|:----:|:---------------------------------------|:---------------------------|:--------------|------------------|
+| 1    | Array                                  | `24006968_razin_L1/`       | 28 May 2025   | -                |
+| 2    | GfG Problems                           | `24006968_razin_L2/`       | 4 June 2025   | Work In Progress |
+| 3    | Singly and Doubly Linked list          | `24006968_razin_L3/`       | 11 June 2025  | -                |
+| 4    | Circular Linked List                   | `24006968_razin_L4/`       | 18 June 2025  | -                |
+| 5    | Stack                                  | `24006968_razin_L5/`       | 25 June 2025  | -                |
+| 6    | Queue                                  | `24006968_razin_L6/`       | 2 July 2025   | -                |
+| 7    | Tree                                   | `24006968_razin_lab7/`     | 9 July 2025   | -                |
 
----
-
-## ⚙️ How to Build and Run
-
-Each lab contains its own project/solution file (if using Visual Studio) or a standalone `.cpp` file.
-
-### General Steps:
-1. Open the `.sln` or `.vcxproj` file in Visual Studio (labs 1–6).
-2. Or compile via terminal:
-   ```bash
-   g++ LabX.cpp -o LabX
-   ./LabX

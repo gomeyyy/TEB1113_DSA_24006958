@@ -1,3 +1,11 @@
+/*
+Name: Muhammad Razin Rahimi Bin Abdul Shukur
+Student ID: 24006958
+Group: G1
+Lab: 7
+--Tree--
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -35,8 +43,25 @@ public:
     }
 
     void display_tree() {
-        Node* currentDisplay = root;
-        cout << "root: " << root->name << endl;
+        // display_tree(node, depth/spacing, Label)
+        // start with empty label, no depth
+        display_tree(root, 0, "Root-");  
+    }
+
+    // Helper with label
+    void display_tree(Node* node, int depth, string label) {
+        if (node == nullptr) return; //end of recursion
+
+        // Indentation
+        for (int i = 0; i < depth; ++i)
+            cout << "   ";
+
+        // Print with label
+        cout << label << node->name << endl;
+
+        // Recursive calls to display Left and Right Child
+        display_tree(node->left, depth + 1, "Left-");
+        display_tree(node->right, depth + 1, "Right-");
     }
 };
 
@@ -50,14 +75,7 @@ int main() {
     tree.add_right(tree.root->left, "E");
     tree.add_left(tree.root->right, "F");
     tree.add_right(tree.root->right, "G");
-
-    cout << "Root: " << tree.root->name << endl;
-    cout << "Left child of root: " << tree.root->left->name << endl;
-    cout << "Right child of root: " << tree.root->right->name << endl;
-    cout << "Left child of B: " << tree.root->left->left->name << endl;
-    cout << "Right child of B: " << tree.root->left->right->name << endl;
-    cout << "Left child of C: " << tree.root->right->left->name << endl;
-    cout << "Right child of C: " << tree.root->right->right->name << endl;
+    tree.display_tree();
 
     return 0;
 }

@@ -2,7 +2,7 @@
 Name: Muhammad Razin Rahimi Bin Abdul Shukur
 Student ID: 24006958
 Group: G1
-Topic: Singly Linked List
+Topic: Circular Linked List
 */
 
 #include <iostream>
@@ -26,30 +26,36 @@ private:
 public:
 	LinkedList() {
 		head = nullptr;
-		tail = nullptr;
+		tail = head;
 	}
 
 	void add(string name) {
 		Node* newNode = new Node(name);
 		if (head == nullptr) {
 			head = tail = newNode;
+			tail->nextPtr = head;
 		}
 		else {
 			tail->nextPtr = newNode;
 			tail = newNode;
+			tail->nextPtr = head;
 		}
-		tail->nextPtr = head;
 	}
 
 	void remove(string name) {
-		if (!head) return;
+		if (head == nullptr) {
+			cout << "List is empty" << endl;
+			return;  
+		}
 
+		// Case: Only one node in the list
 		if (head == tail && head->name == name) {
 			delete head;
 			head = tail = nullptr;
 			return;
 		}
 
+		// Case: Head needs to be removed
 		if (head->name == name) {
 			Node* temp = head;
 			head = head->nextPtr;
@@ -58,47 +64,35 @@ public:
 			return;
 		}
 
+		// Case: Remove node other than head
 		Node* current = head;
-		while (current->nextPtr != head && current->nextPtr->name != name) {
-			current = current->nextPtr;
-		}
+		do {
+			if (current->nextPtr->name == name) {
+				Node* temp = current->nextPtr;
+				current->nextPtr = temp->nextPtr;
 
-		if (current->nextPtr != head) {
-			Node* temp = current->nextPtr;
-			current->nextPtr = temp->nextPtr;
-			if (temp == tail) {
-				tail = current;
+				if (temp == tail) {
+					tail = current;
+				}
+				delete temp;
+				return;
 			}
-			delete temp;
-		}
+			current = current->nextPtr;
+		} while (current != head);
 	}
 
 	void display() {
-		if (head == nullptr) {
-			cout << "Empty List\n";
-			return;
-		}
+		if (head == nullptr) return;
 
 		Node* current = head;
-		do {
-			cout << current->name << "->";
-			current = current->nextPtr;
-		} while (current != head);
-		cout << "(back to head)" << endl;
-	}
-
-	~LinkedList() {
-		if (!head) return;
-
-		Node* current = head;
-
-		while (current) {
-			Node* temp = current;
-			current = current->nextPtr;
-			delete temp;
+		for (int i = 0; i < 3; i++) {
+			do {
+				cout << current->name << " -> ";
+				current = current->nextPtr;
+			} while (current != head);
 		}
+		cout << "(head)" << endl;
 	}
-
 };
 
 int main() {

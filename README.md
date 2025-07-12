@@ -1,5 +1,3 @@
-# ID : 24006958
-# LAB : G1
 # TEB1113 DSA (Data Structures & Algorithms)
 **Student:** Muhammad Razin Rahimi Bin Abdul Shukur (24006958)  
 **Group:** G1

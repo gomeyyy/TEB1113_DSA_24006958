@@ -1,7 +1,6 @@
 /*
 id      : 24006958
 name    : Muhammad Razin Rahimi Bin Abdul Shukur
-email   : muhammad_24006958@utp.edu.my
 lab     : 1
 */
 
